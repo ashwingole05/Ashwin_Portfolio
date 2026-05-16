@@ -56,7 +56,7 @@ const Resume = () => {
         <h2 className="section-title">Resume</h2>
         
         <div className="resume-download">
-          <a href="/my-portfolio/resume.pdf" download="resume.pdf" className="download-btn">
+          <a href="/resume.pdf" download="resume.pdf" className="download-btn">
             <FaDownload />
             <span>Download Resume</span>
           </a>
