@@ -3,11 +3,12 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import './About.css'
 
 const About = () => {
-  // UPDATE THESE WITH YOUR ACTUAL INFORMATION
+
   const personalInfo = {
-    name: "Ashwin Pandurang Gole", // Change this to your actual name
+    name: "Ashwin Pandurang Gole",
+    github:"https://github.com/ashwingole05/",
 email: "https://mail.google.com/mail/?view=cm&to=ashwingole05@gmail.com",
-    linkedin: "https://www.linkedin.com/in/ashwingole05/" // Change to your LinkedIn profile
+    linkedin: "https://www.linkedin.com/in/ashwingole05/" 
   }
 
   return (
