@@ -37,8 +37,8 @@ const Resume = () => {
       degree: 'Bachelor of Science in Computer Science',
       institution: 'Tilak College of Science and Commerce Vashi',
       period: '2025 - 2026',
-      marks: '8.5 CGPA', 
-      description: ' ( Mumbai University ) | Pursuing in the Third Year (Final Year ) . Focus on Programming and Database Management'
+      marks: '8.40 CGPA', 
+      description: ' Mumbai University '
     }
   ]
 
