@@ -7,11 +7,7 @@ export default defineConfig({
   
   build: {
      minify: 'esbuild',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-      },
-    },
+  
     rollupOptions: {
       output: {
         manualChunks: {

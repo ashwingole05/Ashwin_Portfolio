@@ -7,13 +7,14 @@ const Resume = () => {
    
   
     {
-      title: 'Junior Developer',
-      company: 'It Vedanta',
-      period: 'Feb 2025 - Oct 2025',
-      description: 'Assisted in frontend development and learned modern web technologies. Contributed to various projects and gained hands-on experience.',
+      title: 'Java Full Stack Developer Intern',
+      company: 'Zidio Development',
+      period: '1 Month',
+      verification:' Intern Id : - https://zidio.in/p/6a4942bb247c6d64ce4381f8 ', 
+      description: 'Worked on full-stack application development using Java, Spring Boot, React.js, and PostgreSQL, including REST API development, database integration, CRUD operations, debugging, and version control using Git and GitHub.',
       achievements: [
-        'Developed reusable React components',
-        'Improved page load times by 25%'
+        'Gained hands-on industry experience by developing REST APIs, database integrations, role-based authentication, and CRUD functionality using Spring Boot and PostgreSQL.',
+        'Successfully applied Java Full Stack development skills in a real-world project using Spring Boot, React.js, PostgreSQL, Git, GitHub, and Postman.'
       ]
     }
   ]
@@ -78,7 +79,9 @@ const Resume = () => {
                       <h4>{exp.title}</h4>
                       <span className="timeline-period">{exp.period}</span>
                     </div>
+                    <p className="timeline-verification">{exp.verification}</p>
                     <p className="timeline-company">{exp.company}</p>
+                    
                     <p className="timeline-description">{exp.description}</p>
                     <ul className="timeline-achievements">
                       {exp.achievements.map((achievement, idx) => (

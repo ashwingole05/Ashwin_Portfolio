@@ -2,15 +2,37 @@
 import React from 'react'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import './Projects.css'
+import realImage from '/images/real.png'
+import careerflowImage from '/images/careerflow.png'
 import movieImage from '/images/movie.png'
 import WeatherImage from '/images/weather.png'
+import todoImage from '/images/todo.png'
 import BookImage from '/images/book.png'
 import RecipeImage from '/images/recipe.png'
 
 const Projects = () => {
   const projects = [
-    {
+     {
       id: 1,
+      title: 'Real-Time Chat Application',
+      description: 'Developed a real-time chat application using Spring Boot, WebSocket, SockJS, and Thymeleaf, enabling instant communication between connected users with a responsive web interface',
+      technologies: ['Java', 'SpringBoot', 'WebSocket', 'SockJs', 'Thymeleaf','Html' ,'Css','JavaScript'],
+      github: 'github.com/ashwingole05/real_time_chat_application', 
+      live: ' https://real-time-chat-application-xzl5.onrender.com/chat',
+      image:realImage,
+      
+    },
+  {
+  id: 2,
+  title: 'CareerFlow AI',
+  description: 'An AI-powered career development platform that helps users create resumes, generate cover letters, explore career insights, and prepare for interviews with personalized AI assistance.',
+  technologies: [ 'JavaScript', 'PostgreSQL', 'Prisma ORM', 'Google Gemini AI', 'Clerk','Next.js'],
+  github: 'https://github.com/ashwingole05/CareerFlow',
+  live: 'https://career-flow-mu.vercel.app/',
+  image: careerflowImage,
+},
+     {
+      id: 3,
       title: 'Movie Search  application',
       description: 'A dynamic React-based movie discovery application that enables users to search for films and access comprehensive movie details. The platform provides an intuitive interface for exploring vast movie databases with real-time search capabilities.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Movie API'],
@@ -19,8 +41,16 @@ const Projects = () => {
       image:movieImage,
       
     },
+      {
+  id: 4,
+  title: 'Todo List Application',
+  description: 'A full-stack task management application built with Spring Boot and Thymeleaf, allowing users to create, update, complete, and delete tasks with persistent PostgreSQL database storage.',
+  technologies: ['Java', 'Spring Boot', 'Thymeleaf', 'PostgreSQL', 'NeonDB', 'Spring Data JPA', 'Hibernate'],
+  github: 'https://github.com/ashwingole05/TodoList',
+  image: todoImage,
+},
     {
-      id: 2,
+      id: 5,
       title: 'Online Bookstore Application',
       description: 'A comprehensive React-based e-commerce platform for book purchasing with complete end-to-end testing implementation using React Testing Library and Jest.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
@@ -28,8 +58,10 @@ const Projects = () => {
       live: 'https://ashwin-bookstore.netlify.app/',
       image:BookImage,
     },
+
+
     {
-      id: 3,
+      id: 6,
       title: 'Weather Dashboard',
       description: 'A responsive React application that provides real-time weather data for any city worldwide. The dashboard fetches current weather conditions from the Weatherbit API and displays key meteorological information in an intuitive, visually appealing interface.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Weatherbit API'],
@@ -38,7 +70,7 @@ const Projects = () => {
       image: WeatherImage,
     },
     {
-      id: 4,
+      id: 7,
       title: ' Recipe Book Application',
       description: 'A comprehensive React-based e-commerce platform for book purchasing with complete end-to-end testing implementation using React Testing Library and Jest.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
