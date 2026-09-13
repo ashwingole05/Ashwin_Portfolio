@@ -9,11 +9,42 @@ import WeatherImage from '/images/weather.png'
 import todoImage from '/images/todo.png'
 import BookImage from '/images/book.png'
 import RecipeImage from '/images/recipe.png'
-
+import aiWorkspaceImage from '/images/aiworkspace.png'
+import fieldServiceImage from '/images/fieldservice.png'
+import imageStorageImage from '/images/imagestorage.png'
 const Projects = () => {
   const projects = [
+      {
+          id: 1,
+          title: 'Field Service Management System',
+          description: 'Developed as an internship project using Spring Boot and React to manage work orders, service requests, technician assignments, SLA tracking, dashboards, parts and time tracking, and role-based access',
+          technologies: ['Java', 'SpringBoot', 'React', 'TypeScript', 'PostgreSQL', 'JWT', 'HTML', 'CSS', 'JavaScript'],
+          github: 'https://github.com/ashwingole05/Field_Service_Management_System',
+          live: 'https://keystone-fieldservice.onrender.com',
+          image: fieldServiceImage,
+      },
+      {
+          id: 2,
+          title: 'CareerFlow AI',
+          description: 'An AI-powered career development platform that helps users create resumes, generate cover letters, explore career insights, and prepare for interviews with personalized AI assistance.',
+          technologies: [ 'JavaScript', 'PostgreSQL', 'Prisma ORM', 'Google Gemini AI', 'Clerk','Next.js'],
+          github: 'https://github.com/ashwingole05/CareerFlow',
+          live: 'https://career-flow-mu.vercel.app/',
+          image: careerflowImage,
+
+      },
+      {
+          id: 3,
+          title: 'AI Workspace',
+          description: 'Developed an AI-powered workspace using Spring Boot and React that allows users to ask questions, generate recipes for special dishes, and create AI-generated images using Google Gemini and Pixazo.ai APIs',
+          technologies: ['Java', 'SpringBoot', 'React', 'Google Gemini API', 'Pixazo.ai API', 'HTML', 'CSS', 'JavaScript'],
+          github: 'https://github.com/ashwingole05/AI_workspace',
+          live: 'https://ashwin-ai-workspace.onrender.com',
+          image: aiWorkspaceImage,
+      },
+
      {
-      id: 1,
+      id: 4,
       title: 'Real-Time Chat Application',
       description: 'Developed a real-time chat application using Spring Boot, WebSocket, SockJS, and Thymeleaf, enabling instant communication between connected users with a responsive web interface',
       technologies: ['Java', 'SpringBoot', 'WebSocket', 'SockJs', 'Thymeleaf','Html' ,'Css','JavaScript'],
@@ -22,17 +53,22 @@ const Projects = () => {
       image:realImage,
       
     },
-  {
-  id: 2,
-  title: 'CareerFlow AI',
-  description: 'An AI-powered career development platform that helps users create resumes, generate cover letters, explore career insights, and prepare for interviews with personalized AI assistance.',
-  technologies: [ 'JavaScript', 'PostgreSQL', 'Prisma ORM', 'Google Gemini AI', 'Clerk','Next.js'],
-  github: 'https://github.com/ashwingole05/CareerFlow',
-  live: 'https://career-flow-mu.vercel.app/',
-  image: careerflowImage,
-},
+      {
+          id: 5,
+          title: 'Image Storage Application',
+          description: 'Developed an image storage application using Spring Boot and React to upload, store, and retrieve images using NeonDB PostgreSQL with support for searching images by ID and name',
+          technologies: ['Java', 'SpringBoot', 'React', 'PostgreSQL', 'NeonDB', 'JPA', 'HTML', 'CSS', 'JavaScript'],
+          github: 'https://github.com/ashwingole05/image-storage',
+          live: 'https://image-storage-u8n8.onrender.com',
+          image: imageStorageImage,
+      },
+
+
+
+
+
      {
-      id: 3,
+      id: 6,
       title: 'Movie Search  application',
       description: 'A dynamic React-based movie discovery application that enables users to search for films and access comprehensive movie details. The platform provides an intuitive interface for exploring vast movie databases with real-time search capabilities.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Movie API'],
@@ -42,7 +78,7 @@ const Projects = () => {
       
     },
       {
-  id: 4,
+  id: 7,
   title: 'Todo List Application',
   description: 'A full-stack task management application built with Spring Boot and Thymeleaf, allowing users to create, update, complete, and delete tasks with persistent PostgreSQL database storage.',
   technologies: ['Java', 'Spring Boot', 'Thymeleaf', 'PostgreSQL', 'NeonDB', 'Spring Data JPA', 'Hibernate'],
@@ -50,7 +86,7 @@ const Projects = () => {
   image: todoImage,
 },
     {
-      id: 5,
+      id: 8,
       title: 'Online Bookstore Application',
       description: 'A comprehensive React-based e-commerce platform for book purchasing with complete end-to-end testing implementation using React Testing Library and Jest.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
@@ -61,7 +97,7 @@ const Projects = () => {
 
 
     {
-      id: 6,
+      id: 9,
       title: 'Weather Dashboard',
       description: 'A responsive React application that provides real-time weather data for any city worldwide. The dashboard fetches current weather conditions from the Weatherbit API and displays key meteorological information in an intuitive, visually appealing interface.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Weatherbit API'],
@@ -70,7 +106,7 @@ const Projects = () => {
       image: WeatherImage,
     },
     {
-      id: 7,
+      id: 10,
       title: ' Recipe Book Application',
       description: 'A comprehensive React-based e-commerce platform for book purchasing with complete end-to-end testing implementation using React Testing Library and Jest.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS'],

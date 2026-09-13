@@ -3,14 +3,15 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaGithub, FaLinkedin
 import './Contact.css'
 
 const Contact = () => {
+  const formspreeEndpoint = 'https://formspree.io/f/mblplvbe'
 
   const contactInfo = {
-   email: "ashwingole05@gmail.com",
-    gmailLink: "https://mail.google.com/mail/?view=cm&to=ashwingole05@gmail.com", 
-    phone: "+91 8108725388",
-    location: "Vashi ,Navi Mumbai, Maharashtra, India",
-    github: "https://github.com/ashwingole05", 
-    linkedin: "https://linkedin.com/in/ashwingole05/" 
+    email: 'ashwingole05@gmail.com',
+    gmailLink: 'https://mail.google.com/mail/?view=cm&to=ashwingole05@gmail.com',
+    phone: '+91 8108725388',
+    location: 'Vashi, Navi Mumbai, Maharashtra, India',
+    github: 'https://github.com/ashwingole05',
+    linkedin: 'https://linkedin.com/in/ashwingole05/'
   }
 
   const [formData, setFormData] = useState({
@@ -33,20 +34,27 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus(null)
     
     try {
-      const response = await fetch('https://formspree.io/f/mblplvbe', {
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
+          'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          ...formData,
+          _subject: `Portfolio contact: ${formData.subject}`
+        })
       })
 
       if (response.ok) {
         setSubmitStatus('success')
         setFormData({ name: '', email: '', subject: '', message: '' })
       } else {
+        const data = await response.json().catch(() => null)
+        console.error('Formspree error:', data || response.statusText)
         setSubmitStatus('error')
       }
     } catch (error) {
@@ -124,7 +132,12 @@ const Contact = () => {
           </div>
 
           <div className="contact-form-section">
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form
+              className="contact-form"
+              action={formspreeEndpoint}
+              method="POST"
+              onSubmit={handleSubmit}
+            >
               <div className="form-group">
                 <label htmlFor="name">Your Name</label>
                 <input
@@ -198,13 +211,13 @@ const Contact = () => {
 
               {submitStatus === 'success' && (
                 <div className="success-message">
-                  ✓ Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I'll get back to you soon.
                 </div>
               )}
               
               {submitStatus === 'error' && (
                 <div className="error-message">
-                  ✗ Failed to send message. Please try again or email directly.
+                  Failed to send message. Please try again or email directly.
                 </div>
               )}
             </form>

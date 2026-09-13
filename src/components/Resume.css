@@ -125,6 +125,17 @@
   color: var(--text-color);
 }
 
+.experience-tag {
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.25rem 0.65rem;
+  background-color: rgba(0, 102, 255, 0.12);
+  color: var(--primary-color);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 .timeline-period {
   padding: 0.3rem 0.8rem;
   background-color: var(--primary-color);
@@ -139,6 +150,29 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
   font-size: 1.05rem;
+}
+
+.timeline-verifications {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-verification {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.timeline-verification:hover {
+  color: var(--primary-color);
 }
 
 .timeline-description {
@@ -182,6 +216,8 @@
   background-color: var(--bg-color);
   border-radius: 10px;
   box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -200,6 +236,17 @@
   color: var(--text-color);
   font-weight: 600;
   line-height: 1.4;
+}
+
+.certification-tag {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  background-color: rgba(0, 102, 255, 0.12);
+  color: var(--primary-color);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

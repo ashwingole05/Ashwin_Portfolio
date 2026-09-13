@@ -10,7 +10,29 @@ const Resume = () => {
       title: 'Java Full Stack Developer Intern',
       company: 'Zidio Development',
       period: '1 Month',
-      verification:' Intern Id : - https://zidio.in/p/6a4942bb247c6d64ce4381f8 ', 
+      type: 'Internship',
+      verificationLinks: [
+        {
+          label: 'Intern ID',
+          value: '6a4942bb247c6d64ce4381f8',
+          url: 'https://zidio.in/p/6a4942bb247c6d64ce4381f8'
+        },
+        {
+          label: 'Internship Certificate',
+          value: 'https://zidio.in/verify/ZID-V-F3726F4514B5',
+          url: 'https://zidio.in/verify/ZID-V-F3726F4514B5'
+        },
+        {
+          label: 'Training Completion Certificate',
+          value: 'https://zidio.in/verify/ZID-V-85541C886C75',
+          url: 'https://zidio.in/verify/ZID-V-85541C886C75'
+        },
+        {
+          label: 'Experience Certificate',
+          value: 'https://zidio.in/verify/ZID-V-311D927703F9',
+          url: 'https://zidio.in/verify/ZID-V-311D927703F9'
+        }
+      ],
       description: 'Worked on full-stack application development using Java, Spring Boot, React.js, and PostgreSQL, including REST API development, database integration, CRUD operations, debugging, and version control using Git and GitHub.',
       achievements: [
         'Gained hands-on industry experience by developing REST APIs, database integrations, role-based authentication, and CRUD functionality using Spring Boot and PostgreSQL.',
@@ -44,11 +66,30 @@ const Resume = () => {
   ]
 
   const certifications = [
-   
-   'Java Core -It Vedanta',
-   'Spring Boot - It Vedanta',
-   'React - It Vedanta',
-   'MySQL - It Vedanta'
+    {
+      title: 'Java Core - It Vedanta'
+    },
+    {
+      title: 'Spring Boot - It Vedanta'
+    },
+    {
+      title: 'React - It Vedanta'
+    },
+    {
+      title: 'MySQL - It Vedanta'
+    },
+    {
+      title: 'Internship Completion Certificate',
+      tag: 'Internship - Zidio Development'
+    },
+    {
+      title: 'Training Completion Certificate',
+      tag: 'Internship - Zidio Development'
+    },
+    {
+      title: 'Experience Certificate',
+      tag: 'Internship - Zidio Development'
+    }
   ]
 
   return (
@@ -76,10 +117,28 @@ const Resume = () => {
                   <div className="timeline-dot"></div>
                   <div className="timeline-content">
                     <div className="timeline-header">
-                      <h4>{exp.title}</h4>
+                      <div>
+                        <h4>{exp.title}</h4>
+                        {exp.type && <span className="experience-tag">{exp.type}</span>}
+                      </div>
                       <span className="timeline-period">{exp.period}</span>
                     </div>
-                    <p className="timeline-verification">{exp.verification}</p>
+                    {exp.verificationLinks && (
+                      <div className="timeline-verifications">
+                        {exp.verificationLinks.map((link, idx) => (
+                          <a
+                            key={idx}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="timeline-verification"
+                          >
+                            <span>{link.label}:</span>
+                            <span>{link.value}</span>
+                          </a>
+                        ))}
+                      </div>
+                    )}
                     <p className="timeline-company">{exp.company}</p>
                     
                     <p className="timeline-description">{exp.description}</p>
@@ -130,7 +189,10 @@ const Resume = () => {
               {certifications.map((cert, index) => (
                 <div key={index} className="certification-card">
                   <FaAward className="cert-icon" />
-                  <p>{cert}</p>
+                  <div>
+                    {cert.tag && <span className="certification-tag">{cert.tag}</span>}
+                    <p>{cert.title}</p>
+                  </div>
                 </div>
               ))}
             </div>
