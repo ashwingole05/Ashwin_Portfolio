@@ -42,26 +42,27 @@ const Resume = () => {
   ]
 
   const education = [
+    {
+      degree: 'Bachelor of Science in Computer Science',
+      institution: 'Tilak College of Science and Commerce Vashi',
+      period: '2025 - 2026',
+      marks: '8.40 CGPA',
+      description: ' Mumbai University'
+    },
      {
+      degree: 'Higher Secondary School Certificate Examination (HSC)',
+      institution: 'Karmaveer Bhaurao Patil College Vashi',
+      period: '2023',
+      marks: '53.33 %', 
+      description:'Maharashtra State Board'
+    },
+
+    {
       degree: 'Secondary School Certificate Examination (SSC) ',
       institution: 'Vakola English School ',
       period: '2021',
       marks: '84.20 %',
       description: 'Maharashtra State Board'
-    },
-     {
-      degree: 'Higher Secondary School Certificate Examination (HSC)',
-      institution: 'Karmaveer Bhaurauo Patil College Vashi',
-      period: '2023',
-      marks: '53.33 %', 
-      description:'Maharashtra State Board'
-    },
-    {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'Tilak College of Science and Commerce Vashi',
-      period: '2025 - 2026',
-      marks: '8.5 CGPA', 
-      description: ' ( Mumbai University ) | Pursuing in the Third Year (Final Year ) . Focus on Programming and Database Management'
     }
   ]
 
